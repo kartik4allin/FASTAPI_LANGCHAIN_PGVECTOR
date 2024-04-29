@@ -19,7 +19,7 @@ async def callLLM(query:str):
     embeddings=create_embeddings()
 
     #Function to pull index data from Pinecone
-    index=pull_from_pinecone("2bbf649c-10c0-4edf-8c06-9416c17a9d68","gcp-starter","chatbot",embeddings)
+    index=pull_from_pinecone("","gcp-starter","chatbot",embeddings)
     
     #This function will help us in fetching the top relevent documents from our vector store - Pinecone Index
     relavant_docs=get_similar_docs(index,query)
